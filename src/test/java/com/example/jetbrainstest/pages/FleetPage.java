@@ -4,9 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class FleetPage {
+
+  private final Logger LOG = LoggerFactory.getLogger(FleetPage.class);
 
     WebDriver driver;
 
@@ -14,7 +18,7 @@ public class FleetPage {
     private WebElement downloadButton;
 
     public Boolean checkIfDownloadButtonIsClickable() {
-        System.out.println("Проверка активности кнопки загрузки");
+        LOG.info("Проверка активности кнопки загрузки");
         return downloadButton.isEnabled();
     }
 
@@ -27,7 +31,7 @@ public class FleetPage {
     private WebElement DistributedButton;
 
         public Boolean checkIfDistributedButtonIsClickable () {
-            System.out.println("Проверка кликабельности кнопки 'Distributed'");
+            LOG.info("Проверка кликабельности кнопки 'Distributed'");
             return DistributedButton.isEnabled();
         }
     }
