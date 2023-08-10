@@ -31,7 +31,7 @@ public class FleetPage {
 
     @FindBy (css ="span > button:nth-child(2)")
     private WebElement DistributedButton;
-
+    @Step("Проверка кликабельности кнопки 'Distributed'")
         public Boolean checkIfDistributedButtonIsClickable () {
             LOG.info("Проверка кликабельности кнопки 'Distributed'");
             return DistributedButton.isEnabled();
