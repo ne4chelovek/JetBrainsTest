@@ -2,6 +2,7 @@ package com.example.jetbrainstest.tests;
 
 import com.example.jetbrainstest.pages.FleetPage;
 import com.example.jetbrainstest.pages.PyCharmPage;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -15,6 +16,7 @@ public class FleetTest extends BaseTest {
 
     @BeforeEach
     @Override
+    @Step("Переход в раздел Fleet")
     public void setUp() {
         super.setUp();
         getDriver().get("https://www.jetbrains.com/fleet/");

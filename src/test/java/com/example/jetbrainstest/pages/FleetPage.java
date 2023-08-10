@@ -1,5 +1,6 @@
 package com.example.jetbrainstest.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,6 +18,7 @@ public class FleetPage {
     @FindBy(css = "a[data-test='button' ][href='/fleet/download/']")
     private WebElement downloadButton;
 
+    @Step("Проверка активности кнопки загрузки")
     public Boolean checkIfDownloadButtonIsClickable() {
         LOG.info("Проверка активности кнопки загрузки");
         return downloadButton.isEnabled();
@@ -29,7 +31,7 @@ public class FleetPage {
 
     @FindBy (css ="span > button:nth-child(2)")
     private WebElement DistributedButton;
-
+        @Step("Проверка кликабельности кнопки 'Distributed'")
         public Boolean checkIfDistributedButtonIsClickable () {
             LOG.info("Проверка кликабельности кнопки 'Distributed'");
             return DistributedButton.isEnabled();
