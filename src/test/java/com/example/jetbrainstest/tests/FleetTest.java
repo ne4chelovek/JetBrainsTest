@@ -1,5 +1,6 @@
 package com.example.jetbrainstest.tests;
 
+import com.example.jetbrainstest.AllureAttachmentsManager;
 import com.example.jetbrainstest.pages.FleetPage;
 import com.example.jetbrainstest.pages.PyCharmPage;
 import io.qameta.allure.Step;
@@ -41,7 +42,9 @@ public class FleetTest extends BaseTest {
     @DisplayName("Проверка смены языка на Русский")
     public void changeLanguageCheck() {
         FleetPage.switchLanguageTab();
+        AllureAttachmentsManager.screenshot();
         FleetPage.languageChange();
+        AllureAttachmentsManager.screenshot();
         assertEquals("https://www.jetbrains.com/ru-ru/fleet/", getDriver().getCurrentUrl(),"Открыта не верная страница");
     }
 }
