@@ -1,6 +1,7 @@
 package com.example.jetbrainstest.tests;
 
 import com.example.jetbrainstest.AllureAttachmentsManager;
+import com.example.jetbrainstest.MyExtension;
 import com.example.jetbrainstest.pages.FleetPage;
 import com.example.jetbrainstest.pages.PyCharmPage;
 import io.qameta.allure.Step;
@@ -9,9 +10,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+@ExtendWith(MyExtension.class)
 
 public class FleetTest extends BaseTest {
 
