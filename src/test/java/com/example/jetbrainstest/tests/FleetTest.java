@@ -3,11 +3,13 @@ package com.example.jetbrainstest.tests;
 import com.example.jetbrainstest.pages.FleetPage;
 import com.example.jetbrainstest.pages.PyCharmPage;
 import io.qameta.allure.Step;
+import org.checkerframework.checker.units.qual.Time;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FleetTest extends BaseTest {
@@ -31,7 +33,15 @@ public class FleetTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка, что кнопка 'Distributed' активна")
-    public void checkIfDistributedButtonIsClickable(){
+    public void checkIfDistributedButtonIsClickable() {
         assertTrue(FleetPage.checkIfDistributedButtonIsClickable(), "Кнопка 'Distributed' не активна");
-        }
     }
+
+    @Test
+    @DisplayName("Проверка смены языка на Русский")
+    public void changeLanguageCheck() {
+        FleetPage.switchLanguageTab();
+        FleetPage.languageChange();
+        assertEquals("https://www.jetbrains.com/ru-ru/fleet/", getDriver().getCurrentUrl(),"Открыта не верная страница");
+    }
+}
