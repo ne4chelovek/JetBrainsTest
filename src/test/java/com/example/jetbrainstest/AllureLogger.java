@@ -20,4 +20,8 @@ public class AllureLogger {
         logger.info(logText);
         AllureAttachmentsManager.screenshot();
     }
+    @Step("{logText}")
+    public void error(String logText) {
+        logger.error(logText);
+    }
 }
