@@ -45,8 +45,7 @@
 3. Кликнуть Submit
 4. Проверить, что высветилось сообщение "This field is required."
 
-### Ввод невалидного email (enterInvalidEmail)
-1. Открыть https://www.jetbrains.com/clion/
+### Ввод нев ttps://www.jetbrains.com/clion/
 2. Ввести невалидный email в разделе Follow us
 3. Кликнуть Submit
 4. Проверить, что высветилось сообщение "Please enter a valid email address."
