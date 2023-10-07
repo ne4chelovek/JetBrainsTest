@@ -123,7 +123,7 @@ public class DataGripTest extends BaseTest {
 
     @ParameterizedTest(name = "#{index} - Проверка ввода на невалидность Email {0}")
     @CsvSource({"insidi", "%%%/%%%", "pers@lmotion"})
-    @DisplayName("Тест: checkInvalidEnterEmail - Проверка ввода невалидного Email")
+    @DisplayName("Проверка ввода невалидного Email")
     public void checkInvalidEnterEmail(String email) {
         String entering = dataGripPage.enterInvalidEmailGetText(email);
         assertEquals(entering, "Please enter a valid email address.", "Неккоректный текст сообщения валидации");

@@ -50,7 +50,7 @@ public class DataGripPage {
     public WebElement messageEnteringInvalidEmail;
     @FindBy(xpath = "//p[text()='Tell me about new product features as they come out']/following-sibling::p")
     public WebElement messageEnteringValidEmail;
-    @FindBy(xpath = "(//*[name()='svg'][@class='wt-icon wt-icon_theme_light wt-icon_size_xs wt-privacy-notice__info-icon'])")
+    @FindBy(xpath = "//*[name()='path' and contains(@d,'M15 8a7 7 ')]")
     public WebElement moveTooltipElement;
     @FindBy(xpath = "//span[normalize-space()='View sample newsletter']")
     private WebElement linkTextVSN;
