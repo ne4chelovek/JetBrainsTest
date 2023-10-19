@@ -12,6 +12,8 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 import java.util.List;
 
+import static com.example.jetbrainstest.tests.MyWait.myWait;
+
 
 public class FleetPage {
 
@@ -207,8 +209,7 @@ public class FleetPage {
 
     public boolean validTextAfterSub() {
         LOG.infoWithScreenshot("Появление текста после валидного ввода email");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
-        wait.until(ExpectedConditions.visibilityOf(validMessageAfterSubscription));
+        myWait(5).visible(validMessageAfterSubscription);
         return validMessageAfterSubscription.isDisplayed();
     }
 
@@ -218,8 +219,6 @@ public class FleetPage {
     }
 
     public void searchButtonInput(String inputText) {
-       // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
-       // wait.until(ExpectedConditions.visibilityOf((searchField)));
         LOG.info("Ввод текста");
         searchField.sendKeys(inputText);
     }
