@@ -12,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(MyExtension.class)
-
 public class FleetTest extends BaseTest {
 
     private FleetPage FleetPage;

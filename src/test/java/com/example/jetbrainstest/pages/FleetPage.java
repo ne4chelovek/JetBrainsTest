@@ -128,9 +128,8 @@ public class FleetPage {
     }
 
     public void clickSmartButton() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         smartButton.click();
-        wait.until(ExpectedConditions.elementToBeClickable(smartButton));
+        myWait(5).visible(smartButton);
         LOG.info("Клик по кнопке Smart");
     }
 
